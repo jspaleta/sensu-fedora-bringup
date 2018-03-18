@@ -24,7 +24,7 @@ And going further, I'd like to provide a small bit of reusable shell magic to ma
 
 ## Plan of Attack
 ### Sensu Core 1.x
-Mature and ruby gem based. Real Benefit here is Goal 2. This is a great target for end-user consumable Fedora/EPEL repository packages.
+Mature and ruby gem based. Primary benefit: Goal 1. This is a great target for end-user consumable Fedora/EPEL repository packages.
 
 ### Sensu Core 2.x
-This is the new hotness. Go based and under heavy development.  Real benefit here for Goal 2.  This will hopefully lower the bar for community to test sensu 2.x including sensu 1.x to sensu 2.x migration paths.
+This is the new hotness. Go based and under heavy development.  Primary Benefit: Goal 2.  This will hopefully lower the bar for community to test sensu 2.x including sensu 1.x to sensu 2.x migration paths.
