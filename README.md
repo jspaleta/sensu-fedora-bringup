@@ -20,11 +20,11 @@ Let's make it easy for potential contributors of sensu core to install and test 
 
 For Fedora specifically, I intend to build the the reference rpm spec file to make it easy to locally build a sensu rpm built from a specific git repo or git commit. With that spec file, you will be able to locally build and install a replacement rpm, reusing the same configs, the same package preinstall scripts and what not as provided in the official Fedora/EPEL package from Goal 1. This greatly lowers the bar to for community contributors looking to help sensu testing by dogfooding of weekly or nightly pre-release builds with their real world workloads by running sensu pre-release in parallel with a production roll out. 
 
-And going further, I'd like to provide a small bit of reusable shell magic to make it easy to use the sensu git repository as a regular user, outside the packaging system, as a way to easily run in-development sensu feature branches so community actively working on an sensu core enhancement, can install and use a sensu core branch without having to disturb an installed sensu release package set.   Things like reusable userspace systemd service units, and drop-in bash stanzas so you can setup a little filesystem pocket sensu repository branch 
+And going further, I'd like to provide a small bit of reusable shell magic to make it easy to use the sensu git repository as a regular user, outside the packaging system, as a way to easily run in-development sensu feature branches so community actively working on an sensu core enhancement, can install and use a sensu core branch without having to disturb an installed sensu release package set.   Things like reusable userspace systemd service units, and drop-in bash stanzas so you can setup a little pocket in your workstation filesystem from which you can run and hack on the sensu repository branch without having to install anything sensu specific systemwide.
 
 ## Plan of Attack
 ### Sensu Core 1.x
-Mature and ruby gem based. Primary benefit: Goal 1. This is a great target for end-user consumable Fedora/EPEL repository packages.
+Mature and ruby gem based. Primary benefit: Goal 1. sensu core 1.x is a great target for end-user consumable Fedora/EPEL repository packages.
 
 ### Sensu Core 2.x
-This is the new hotness. Go based and under heavy development.  Primary Benefit: Goal 2.  This will hopefully lower the bar for community to test sensu 2.x including sensu 1.x to sensu 2.x migration paths.
+This is the new hotness. Go based and under heavy development.  Primary Benefit: Goal 2.  This will hopefully lower the bar for community to test sensu 2.x including sensu 1.x to sensu 2.x migration paths.  
