@@ -23,7 +23,7 @@ For Fedora specifically, I intend to build the the reference rpm spec file to ma
 And going further, I'd like to provide a small bit of reusable shell magic to make it easy to use the sensu git repository as a regular user, outside the packaging system, as a way to easily run in-development sensu feature branches so community actively working on an sensu core enhancement, can install and use a sensu core branch without having to disturb an installed sensu release package set.   Things like reusable userspace systemd service units, and drop-in bash stanzas so you can setup a little pocket in your workstation filesystem from which you can run and hack on the sensu repository branch without having to install anything sensu specific systemwide.
 
 ## Plan of Attack
-### Sensu Core 1.x
+### [Sensu Core 1.x](/sensu-core-1.x/FEDORA_ENABLEMENT.md)
 Mature and ruby gem based. Primary benefit: Goal 1. sensu core 1.x is a great target for end-user consumable Fedora/EPEL repository packages.
 
 ### Sensu Core 2.x
