@@ -179,7 +179,7 @@ Check to make sure the plugin script is installed in the user's executable path:
 
 
 ##### Note 1
-If the systemwide sensu rpm RHEL/Centos is installed, The systemwide sensu-install maybe invoked and will attempt to install the plugin systemwide and will result in an error. 
+If the systemwide sensu rpm RHEL/Centos is installed, the systemwide sensu-install may be invoked and will attempt to install the plugin into the embedded environment installed as part of the sensu package.  This will result in an access denied error. If this happens try calling `$HOME/bin/sensu-install` explicitly or use the `gem install` mechanism. 
 
 
 ---
@@ -223,5 +223,5 @@ Add a new file called `$HOME/sensu/etc/sensu/conf.d/systemd-check.json`
 }
 ```
 
-With the debug handler, both the client and the server logs now be logging messages concerning check request and check result
+With the debug handler, both the client and the server logs should now be logging messages concerning check request and check result.   And if the 2nd client was also configured to subscribe to "fedora-hosts", you should see both clients responding to check requests.  
 
