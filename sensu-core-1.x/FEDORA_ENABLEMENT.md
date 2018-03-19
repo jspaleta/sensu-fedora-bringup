@@ -179,7 +179,7 @@ Check to make sure the plugin script is installed in the user's executable path:
 
 
 ##### Note 1
-If the systemwide sensu rpm RHEL/Centos is installed, the systemwide sensu-install may be invoked and will attempt to install the plugin into the embedded environment installed as part of the sensu package.  This will result in an access denied error. If this happens try calling `$HOME/bin/sensu-install` explicitly or use the `gem install` mechanism. 
+If the systemwide sensu RHEL/Centos rpm is installed, the systemwide sensu-install may be invoked and will attempt to install the plugin into the embedded environment installed as part of the sensu package.  This will result in an access denied error. If this happens try calling `$HOME/bin/sensu-install` explicitly or use the `gem install` mechanism. 
 
 
 ---
