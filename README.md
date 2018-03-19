@@ -12,6 +12,8 @@ If Sensu's RHEL/Centos rpms work on Fedora why bother?
 
 The provided Sensu core 1.x packages use an embedded ruby environment as a convenience. This potentially has some security concerns as some of the bundled libraries in the embedded ruby environment (ex: openssl) installed as part of the Sensu provided package (look in /opt/sensu/embedded/lib/).  There is an arguable benefit in being able to have a package of Sensu that is built against system libraries (maintained by the packaging system) to take advantage of vendor provided security updates for system libraries.  We can get there by building a reusable rpm specfile and associated srpm that can be rebuilt in a clean Fedora environment.  An install via ruby gems won't have this particular concern, but you lose some of the benefits of using the rpm packaging manager in non-containerized environment.
 
+Looking forward a bit further, having Fedora/EPEL packages will be very useful when building k8s containers using the buildah utility to install rpm packages directly into the container. Having official Fedora/EPEL binary packages that make use of vendor provided ruby and library deps should result in a smaller sensu k8s container image.
+
 Additionally, the existing Sensu rpms make some tradeoffs in its rpm preinstall scripts with regard to trying to support multiple vendor targets (check rpm -q --scripts sensu) that result in false positive rpm verify (rpm -V sensu) warnings concerning user/group changes on the configuration files and directories.  It would be great from an admin perspective to have a set of Sensu rpm packages that installed and verified cleanly.  
 
 #### Why not Debian Packages?
