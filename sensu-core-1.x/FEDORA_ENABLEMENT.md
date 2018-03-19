@@ -89,6 +89,9 @@ You should also have a set of sensu binaries available in `~/bin/` Check using:
 
 `ls -1 ~/bin/`
 
+##### Note 1
+This tutorial can be extended to use bundler for gem installs to support parallel installs of different sensu releases in cleanly separated project spaces. Bundler is commonly used for rails application deployment as a best practise, but there's nothing rails specific about it.  For now this is left as an exercise for the reader.   
+
 ---
 
 ## Setup filesystem directory structure
@@ -115,6 +118,7 @@ Recent versions of systemd have the ability to run user services. These are a gr
 `cp systemd/* ~/.config/systemd/user/`
 
 These systemd service files assume $HOME/sensu will hold your local copy  of the filesystem stub directory.
+
 
 ---  
 
