@@ -1,0 +1,28 @@
+##
+#  This unit file is intended to be used a system user service via systemctl --user
+#
+#  Please update with correct path information to match your sensu source install
+##
+[Unit]
+Description=sensu server with SENSU_PREFIX: /%h/sensu
+After=network-online.target
+AssertPathExists=/%h/sensu
+
+[Service]
+Environment=SENSU_PREFIX=/%h/sensu 
+Environment=SENSU_LOADED_TEMPFILE_DIR=/%h/sensu/tmp
+Environment="PATH=/%h/bin/:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+
+WorkingDirectory=/%h/sensu
+PrivateTmp=true
+NoNewPrivileges=true
+
+ExecStart=/usr/bin/env /%h/bin/sensu-server -c ${SENSU_PREFIX}/etc/sensu/config.json -d ${SENSU_PREFIX}/etc/sensu/conf.d/ -e ${SENSU_PREFIX}/etc/sensu/extensions -p ${SENSU_PREFIX}/var/run/sensu/sensu-server.pid -l ${SENSU_PREFIX}/var/log/sensu/sensu-server.log -L info 
+Restart=on-failure
+RestartSec=1min
+
+
+ExecStopPost=/usr/bin/rm ${SENSU_LOADED_TEMPFILE_DIR}/sensu_server_loaded_files
+
+[Install]
+WantedBy=network-online.target
