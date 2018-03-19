@@ -2,7 +2,7 @@
 Little glue bits necessary to bring up Sensu server/client services on Fedora... hopefully leading to official Fedora/EPEL packages.
 
 ## Quick Start
-If you just want to try Sensu out really quickly, follow the Sensu 1.x [ 5 minute quick start guide for RHEL/Centos] (https://docs.sensu.io/sensu-core/1.2/quick-start/five-minute-install/) .The Sensu provided binary packages for RHEL/Centos 7 should install and run on currently supported Fedora installs.
+If you just want to try Sensu out really quickly, follow the Sensu 1.x [5 minute quick start guide for RHEL/Centos](https://docs.sensu.io/sensu-core/1.2/quick-start/five-minute-install/) .The Sensu provided binary packages for RHEL/Centos 7 should install and run on currently supported Fedora installs.
 
 ### Motivation 1: Generate Official Fedora/EPEL Packaging
 The provided binary rpms don't conform to the Fedora packaging guidelines, and there is no srpm or spec file, so the provided sensu packaging is a non-starter for inclusion in Fedora/EPEL as official packages.    
