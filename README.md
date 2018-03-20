@@ -34,7 +34,7 @@ Ruby gem based and ready for production installs.
 #### Primary benefit: Motivation 1 
 Sensu core 1.x is a great target for end-user consumable Fedora/EPEL repository packages.
 
-### Sensu Core 2.x
+### [Sensu Core 2.x](/sensu-core-2.x/FEDORA_ENABLEMENT.md)
 This is the new hotness. Go based and under heavy development.  
 
 #### Primary Benefit: Motivation 2  
