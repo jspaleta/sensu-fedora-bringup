@@ -8,8 +8,9 @@ Most of these instructions should apply to any linux distribution using systemd,
 
 ---
 
-## Pre-Reqs
 ### Install the sensu 2.x nightly el/7 yum repository
+
+Sensu 2.x is currently under heavy development as it pushes towards its official .0 release.  Tracking the nightly builds and testing should be interesting.
 
 The RHEL/Centos nightly build should work on any modern Fedora instance as the packaged binaries are statically linked. 
 The the repository install shell script provided in the Sensu 2.x install instructions build and install a repository definitions based on your version of fedora, which is the responsible thing to do. Unfortunately the fedora repository definition doesn't actually exist. So I'm going to a little irresponsible and use the el/7 repository instead.  So after you run the repository install script you'll need to edit the repository definition slightly.
@@ -93,8 +94,23 @@ password: <PASSWORD>
 You should see check-requests being issued by the backend and recieved by the agent every minute or so.
 
 
-## Note:
+## Sensu From Source
 
-Sensu 2.x is currently under heavy development as it pushes towards its official .0 release.  Tracking the nightly builds and testing should be interesting.
+## Setup Go development environment
+
+`sudo dnf install golang`
+
+Make sure golang package is at least version 1.7. Old versions of golang wont work to build the deps.
 
 
+
+`mkdir -p $HOME/go`
+`echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc`
+`source $HOME/.bashrc`
+
+Make sure go dep is installed https://github.com/golang/dep   and the dep command is in your executable path.
+
+## Build sensu 2.x from source
+Checkout the sensu-go repository into the directory `$GOPATH/src/github.com/sensu-go` and follow the build/test instructions
+
+ 
